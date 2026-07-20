@@ -3,3 +3,10 @@ node_modules
 .env
 .env.local
 dist
+
+# Ignore assignment ZIP files
+*.zip
+
+# Ignore submission folders
+FL-01-Submission-Bilal-Hussain/
+Draw-The-Path-Portfolio-Sitemap-Bilal-Hussain/
