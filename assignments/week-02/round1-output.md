@@ -1,4 +1,3 @@
-
 # FE-03 Round 1
 
 ## Prompt

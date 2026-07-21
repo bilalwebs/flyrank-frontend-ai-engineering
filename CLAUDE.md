@@ -56,3 +56,11 @@ Build clean, production-ready web applications while learning modern frontend sk
 - Make small, focused changes — one feature or fix at a time.
 - Match the style and structure of existing code in the repo.
 - Explain trade-offs briefly when there are multiple valid approaches.
+
+## Project Rules Learned
+
+1. Use TypeScript for all React components.
+2. All forms must use React Hook Form with Zod validation. Never manage form state manually with useState unless there is a specific reason.
+3. Use Tailwind CSS only. Avoid inline styles.
+4. Build reusable components instead of page-specific components.
+5. Every form must include semantic HTML, associated labels, keyboard accessibility, and appropriate ARIA attributes.
