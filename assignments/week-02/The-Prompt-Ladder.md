@@ -47,7 +47,11 @@ I would define the visual style.
 
 ---
 
+
+
 # Version 1
+
+
 
 ## Prompt
 
@@ -59,6 +63,8 @@ The visual style should be minimal and clean.
 
 ```
 
+
+
 ## Response (Excerpt)
 
 The AI suggested a clean layout with plenty of whitespace, modern typography, subtle colors, and a professional interface.
@@ -67,7 +73,7 @@ The AI suggested a clean layout with plenty of whitespace, modern typography, su
 
 **What changed in the prompt?**
 
-I added a visual style preference.
+I added a clear design style requirement.
 
 **What improved in the output?**
 
@@ -83,7 +89,11 @@ I would define the target audience.
 
 ---
 
+
+
 # Version 2
+
+
 
 ## Prompt
 
@@ -94,6 +104,8 @@ Build a portfolio website for a Frontend AI Engineering student.
 The audience is recruiters looking for frontend internship candidates.
 
 ```
+
+
 
 ## Response (Excerpt)
 
@@ -119,7 +131,11 @@ I would provide project context.
 
 ---
 
+
+
 # Version 3
+
+
 
 ## Prompt
 
@@ -132,6 +148,8 @@ The audience is recruiters looking for frontend internship candidates.
 This portfolio is for my FlyRank Frontend AI Engineering Internship projects.
 
 ```
+
+
 
 ## Response (Excerpt)
 
@@ -157,7 +175,11 @@ I would specify the output format.
 
 ---
 
+
+
 # Version 4
+
+
 
 ## Prompt
 
@@ -185,6 +207,8 @@ Return the response in this format:
 
 ```
 
+
+
 ## Response (Excerpt)
 
 The AI returned the information in six clearly organized sections, making the implementation plan much easier to understand.
@@ -209,7 +233,11 @@ I would define quality requirements.
 
 ---
 
+
+
 # Version 5 (Final)
+
+
 
 ## Prompt
 
@@ -248,6 +276,8 @@ Requirements:
 - Make the structure production-ready and easy to maintain.
 ```
 
+
+
 ## Response (Excerpt)
 
 The AI generated a production-ready portfolio plan with reusable React components, recruiter-focused UX, clean architecture, Next.js best practices, and a maintainable folder structure.
@@ -271,6 +301,8 @@ Adding the quality requirements did not significantly change the generated portf
 I would provide my real FlyRank internship projects, GitHub links, and live demos to generate final production-ready portfolio content.
 
 ---
+
+
 
 # Final Reusable Prompt
 
@@ -310,6 +342,8 @@ Requirements:
 ```
 
 ---
+
+
 
 # Reflection
 
