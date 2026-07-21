@@ -30,7 +30,7 @@ I build modern, responsive frontend web applications using React, Next.js, TypeS
 
 ---
 
-## ## Portfolio Sitemap
+## Portfolio Sitemap
 
 My portfolio will include only the essential sections needed to guide recruiters from understanding who I am to contacting me.
 

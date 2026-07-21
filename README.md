@@ -8,32 +8,77 @@ The goal is to practice real-world frontend skills—from HTML and CSS basics to
 
 ## Tech Stack
 
-
 | Category     | Technologies                                                    |
 | ------------ | --------------------------------------------------------------- |
 | **Frontend** | HTML, CSS, JavaScript, React, Next.js, TypeScript, Tailwind CSS |
-| **AI Tools** | Claude Code, Cursor                                             |
-
+| **Forms**    | React Hook Form, Zod                                            |
+| **AI Tools** | Claude, Cursor, ChatGPT                                         |
 
 ---
-
-
 
 ## Repository Structure
 
 ```
 flyrank-frontend-ai-engineering/
-├── README.md          # Project overview and setup guide
-├── CLAUDE.md          # AI assistant instructions and coding rules
-├── .gitignore         # Files excluded from version control
-└── (projects)         # Assignments and apps added during the internship
+├── README.md              # Project overview and setup guide
+├── CLAUDE.md              # AI assistant instructions and coding rules
+├── .gitignore             # Files excluded from version control
+└── assignments/
+    ├── week-01/           # Portfolio planning and AI workflow setup
+    └── week-02/           # Prompt engineering and AI-assisted coding drills
 ```
 
-> **Note:** New folders and projects will be added here as the internship progresses. Each assignment will live in its own directory with its own setup instructions.
+> **Note:** New folders and projects will be added here as the internship progresses. Each assignment lives in its own markdown file with supporting outputs and assets.
 
 ---
 
+## Assignments
 
+| Week | Assignment | File |
+| ---- | ---------- | ---- |
+| 1 | Draw the Path – Portfolio Sitemap + Toolkit | [`assignments/week-01/Draw-The-Path-Portfolio-Sitemap.md`](assignments/week-01/Draw-The-Path-Portfolio-Sitemap.md) |
+| 1 | FL-01 – AI Workflow Audit | [`assignments/week-01/FL-01-Workflow-Audit.md`](assignments/week-01/FL-01-Workflow-Audit.md) |
+| 1 | What Are You Proving? | [`assignments/week-01/What-Are-You-Proving.md`](assignments/week-01/What-Are-You-Proving.md) |
+| 2 | FL-02 – Prompting Fundamentals | [`assignments/week-02/FL-02-Prompting-Fundamentals.md`](assignments/week-02/FL-02-Prompting-Fundamentals.md) |
+| 2 | Frame It as Cases | [`assignments/week-02/Frame-It-As-Cases.md`](assignments/week-02/Frame-It-As-Cases.md) |
+| 2 | The Prompt Ladder | [`assignments/week-02/The-Prompt-Ladder.md`](assignments/week-02/The-Prompt-Ladder.md) |
+| 2 | FE-03 – AI-Assisted Workflow Drill | [`assignments/week-02/WORKFLOW.md`](assignments/week-02/WORKFLOW.md) |
+
+Supporting FE-03 outputs: [`round1-output.md`](assignments/week-02/round1-output.md) and [`round2-output.md`](assignments/week-02/round2-output.md).
+
+---
+
+## AI Workflow Overview
+
+This repository documents how I work with AI tools during frontend development:
+
+1. **Plan first** — define the goal, audience, and constraints before prompting.
+2. **Prompt in layers** — start simple, then add role, context, examples, output structure, and edge cases.
+3. **Review everything** — treat AI output as a draft, not a final answer.
+4. **Capture learnings** — save prompts, outputs, and reflections in assignment files.
+
+Coding standards and form rules for AI assistants are defined in [`CLAUDE.md`](CLAUDE.md).
+
+---
+
+## Learning Outcomes
+
+By completing this internship track, I am building skills in:
+
+- Modern frontend development with React, Next.js, TypeScript, and Tailwind CSS
+- Accessible, reusable component design
+- Form handling with React Hook Form and Zod validation
+- Prompt engineering for production-quality AI-assisted coding
+- Documenting technical decisions for portfolio and recruiter audiences
+- Professional GitHub workflow with clear commits and organized assignments
+
+---
+
+## Repository Status
+
+This repository is updated weekly as part of the FlyRank Frontend AI Engineering Internship. New assignments, projects, and frontend applications will be added throughout the internship.
+
+---
 
 ## Getting Started
 
@@ -79,20 +124,17 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 - Learn AI-assisted frontend development
 - Build production-ready web applications
 - Complete the FlyRank Frontend AI Engineering track
+- Document my AI workflow so recruiters can see how I think and build
 
 ---
 
-
-
 ## Author
 
-**Bilal**  
+**Muhammad Bilal Hussain**  
 GitHub: [@bilalwebs](https://github.com/bilalwebs)
 
 ---
 
-
-
 ## License
 
-This repository is for educational purposes as part of the FlyRank Frontend AI Engineering Internship.
+This repository is for educational purposes as part of the FlyRank Frontend AI Engineering Internship. All assignment content represents my own work, with AI tools used as assistants and all outputs reviewed before submission.

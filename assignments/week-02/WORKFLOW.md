@@ -1,5 +1,13 @@
-
 # FE-03 AI-Assisted Workflow Drill
+
+**Student:** Muhammad Bilal Hussain  
+**Track:** Frontend AI Engineering  
+**Assignment:** FE-03 – AI-Assisted Workflow Drill  
+**Repository:** [https://github.com/bilalwebs/flyrank-frontend-ai-engineering](https://github.com/bilalwebs/flyrank-frontend-ai-engineering)
+
+**Related files:** [`round1-output.md`](round1-output.md) · [`round2-output.md`](round2-output.md)
+
+---
 
 ## Overview
 
@@ -49,6 +57,26 @@ The AI produced a much higher quality solution that included:
 - Production-readiness review
 
 The response also explained the design decisions, validation schema, edge cases, and best practices before generating the code.
+
+## Prompt Quality Comparison
+
+| Aspect | Round 1 | Round 2 |
+| ------ | ------- | ------- |
+| Role and context | None | Senior frontend engineer + portfolio project context |
+| Tech stack | Unspecified | Next.js, TypeScript, Tailwind, RHF, Zod |
+| File location | Not specified | `components/forms/SettingsForm.tsx` |
+| Validation rules | None | Zod schema with trim, email, enum, and error messages |
+| Accessibility | Not addressed | Labels, ARIA, keyboard support, semantic HTML |
+| Output structure | Single code block | 10-section engineering deliverable |
+| Verification | None | Requirements check, bug review, test cases |
+
+## Accessibility
+
+Round 1 used unstyled inline CSS and basic labels without error announcements or ARIA attributes. Round 2 linked every field to a label, announced validation errors with `role="alert"` and `aria-live="polite"`, marked invalid fields with `aria-invalid`, and kept all controls as native HTML elements for keyboard accessibility. This difference shows that accessibility requirements must be stated explicitly in the prompt — AI will not add them reliably from a vague request.
+
+## Production Readiness
+
+Round 1 code could run in a demo but would not pass a production review: no types, no validation library, inline styles, and no separation between UI and submit logic. Round 2 separated the Zod schema, typed props with `z.infer`, disabled the submit button during async submission, handled whitespace edge cases, and included a production-readiness verdict with suggested follow-ups (submit-error UI, unit tests, i18n). One remaining gap — the `"use server"` usage example — needed manual correction before real use.
 
 ## Edge Cases
 

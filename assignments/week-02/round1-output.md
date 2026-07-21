@@ -8,14 +8,6 @@ Build a settings form in React.
 
 ## AI Output
 
-The prompt **"Build a settings form in React."** is a **vague prompt**. If you're using it as-is (for example, in the FlyRank Round One assignment), you would simply provide:
-
-```text
-Build a settings form in React.
-```
-
-If your goal is to actually build the component, here's a simple React example:
-
 ```jsx
 import { useState } from "react";
 
@@ -102,14 +94,6 @@ export default function SettingsForm() {
   );
 }
 ```
-
-If this is for the **FlyRank FE-03 assignment**, then **Round One** should use only the simple prompt:
-
-```text
-Build a settings form in React.
-```
-
-and **Round Two** should use a much more detailed prompt with TypeScript, Tailwind CSS, validation, accessibility, reusable components, and production-quality requirements.
 
 ## Analysis
 
