@@ -1,4 +1,3 @@
-
 # FL-02: Prompting Fundamentals on Real Tasks v2
 
 **Student:** Muhammad Bilal Hussain
@@ -579,3 +578,100 @@ Explicitly instructing the model to reason through required props, edge cases, a
 ## Conclusion
 
 Each prompt engineering technique addressed a distinct category of weakness in the model's output: Role Assignment improved the baseline quality of the generated code, Context and Motivation defined *what* needed to be built and *why*, Few-shot Examples ensured the result matched real project conventions, Output Structure made the response predictable and directly usable, and Step Decomposition caught robustness and accessibility issues that would otherwise have gone unnoticed until encountered in production. Applying these techniques cumulatively demonstrates that effective prompt engineering is not about writing longer prompts, but about deliberately closing specific gaps — in quality, relevance, style, usability, and completeness — that a vague prompt leaves open for the model to guess.
+
+---
+
+# Cross-Model Comparison
+
+## Claude
+
+### Strengths
+
+* Followed the requested output structure very closely.
+* Thought through real-world edge cases before generating the code.
+* Improved the component by making GitHub and Live Demo links optional.
+* Considered accessibility by adding semantic headings, `aria-label` attributes, and secure external links.
+* Focused on production-ready improvements such as graceful handling of missing data and `line-clamp-3` for long descriptions.
+
+### Weaknesses
+
+* The generated code contained a formatting issue where the opening `<a>` tags were accidentally omitted in the link section, requiring a small manual correction.
+* Added a few implementation details (such as rendering technologies as badges) that slightly deviated from the original example style.
+
+---
+
+## ChatGPT
+
+### Strengths
+
+* Produced clean, readable, and syntactically correct TypeScript code.
+* Clearly explained each reasoning step before writing the final component.
+* Included handling for optional GitHub and Live Demo links.
+* Used semantic HTML and good Tailwind CSS practices.
+* Generated code that was immediately usable without formatting errors.
+
+### Weaknesses
+
+* The design stayed closer to a generic card component instead of closely matching the existing `SkillCard` and `CertificateCard` coding style.
+* Suggested displaying `"No technologies listed."`, which changes the visual layout instead of simply hiding the empty section.
+* Did not include accessibility enhancements such as `aria-label` attributes.
+
+---
+
+## Overall Comparison
+
+| Category                  | Claude     | ChatGPT    |
+| ------------------------- | ---------- | ---------- |
+| Followed Prompt Structure | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| Code Quality              | ⭐⭐⭐⭐☆ | ⭐⭐⭐⭐⭐ |
+| Matches Existing Style    | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐☆ |
+| Edge Case Handling        | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐☆ |
+| Accessibility             | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐☆ |
+| Production Readiness      | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐☆ |
+
+### Final Verdict
+
+Both models produced high-quality solutions, but they showed different strengths. Claude focused more on software engineering practices, defensive programming, accessibility, and maintaining consistency with the existing project structure. ChatGPT generated cleaner and immediately runnable code with excellent explanations, but it stayed slightly more generic and included fewer accessibility improvements. For this portfolio project, Claude's response aligns more closely with the goal of building a production-ready reusable component, while ChatGPT provides a strong implementation that requires fewer syntax corrections.
+
+---
+
+# Reusable Prompt Template
+
+You are a senior [ROLE].
+
+I am building a [PROJECT TYPE] for [PURPOSE].
+
+Create a reusable [COMPONENT NAME].
+
+The component should include:
+
+- [Feature 1]
+- [Feature 2]
+- [Feature 3]
+
+Follow the coding style of these existing examples:
+
+[Example 1]
+
+[Example 2]
+
+Before writing the final code:
+
+1. Analyze the requirements.
+2. Define the required props and explain their purpose.
+3. Identify possible edge cases.
+4. Plan the component structure and accessibility considerations.
+5. Review the solution for maintainability and best practices.
+
+Return the answer using this structure:
+
+1. Component Purpose
+2. File Location
+3. Props Interface
+4. Complete Component Code
+5. Usage Example
+6. Best Practices
+
+## Why this Template is Reusable
+
+This prompt template is intentionally generic and is not tied to a specific project or component. By replacing the placeholders (such as the role, project type, component name, required features, and example components), it can be reused for many different React and Next.js component generation tasks. The template combines multiple prompt engineering techniques—including role assignment, context and motivation, few-shot examples, output structure, and step decomposition—to consistently produce well-structured, maintainable, and production-ready code.
