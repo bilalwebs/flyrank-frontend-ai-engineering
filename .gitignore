@@ -1,12 +1,21 @@
-node_modules
-.next
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+
+# Build output
+dist/
+
+# Environment files
 .env
 .env.local
-dist
 
-# Ignore assignment ZIP files
+# ZIP files
 *.zip
 
-# Ignore submission folders
+# Local submission folders
 FL-01-Submission-Bilal-Hussain/
 Draw-The-Path-Portfolio-Sitemap-Bilal-Hussain/
+What-Are-You-Proving-Bilal-Hussain/
+Frame-It-As-Cases-Bilal-Hussain/
