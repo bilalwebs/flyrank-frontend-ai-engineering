@@ -50,7 +50,9 @@ The AI produced a much higher quality solution that included:
 
 The response also explained the design decisions, validation schema, edge cases, and best practices before generating the code.
 
----
+## Edge Cases
+
+The Round 2 prompt encouraged the AI to consider edge cases such as empty required fields, invalid email addresses, whitespace-only input, repeated form submissions, and changing default values. These scenarios were not addressed in the Round 1 output, making the second implementation more robust and reliable.
 
 ## Comparison
 
@@ -70,7 +72,9 @@ One issue I noticed in the Round 2 response was the example showing `"use server
 
 This reminded me that AI-generated code should always be reviewed before being accepted.
 
----
+## Review Effort
+
+The Round 1 solution required significant manual improvements before it could be considered production-ready. In contrast, the Round 2 solution required only minor review because most project requirements were already implemented. Although writing the detailed prompt took more time, it reduced the total development and review effort.
 
 ## Lessons Learned
 
