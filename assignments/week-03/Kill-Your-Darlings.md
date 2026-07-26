@@ -7,8 +7,9 @@
 3. Favicon
 4. Portfolio Hero Illustration
 5. Project Screenshots
-6. Skills Icons
-7. Contact Illustration
+6. Certificates
+7. Skills Icons
+8. Contact Illustration
 
 ---
 
@@ -16,19 +17,20 @@
 
 - Profile Photo
 - Project Screenshots
+- Certificates
 - Logo
 
 ---
 
 ## AI Generated Images
 
-- [ ] Minimal hero illustration
-- [ ] Abstract geometric background graphics
+- Minimal hero illustration
+- Abstract geometric background graphics
 
-These images will be used only to support the visual design while keeping the main focus on my projects and portfolio content.
+These images are used only to support the visual design while keeping the primary focus on my projects and portfolio content.
 
 ---
 
 ## Rejected Image
 
-I rejected one AI-generated illustration because it contained too many decorative elements and bright colors. It distracted attention from the portfolio content and did not match the clean, minimal design style.
+I rejected one AI-generated illustration because it contained excessive decorative elements, bright colors, and unnecessary visual noise. It distracted attention from the portfolio content and did not match the clean, minimal, recruiter-focused design style of my identity kit.

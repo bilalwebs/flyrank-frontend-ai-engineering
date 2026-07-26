@@ -1,4 +1,3 @@
-
 # Decide Once: Build Your Identity Kit
 
 ## Student
@@ -73,8 +72,6 @@ Files:
 
 Modern, clean, minimal, recruiter-friendly, and professional. The portfolio keeps the focus on projects instead of decorative elements.
 
+
+
 ---
-
-## Reflection
-
-Creating this Identity Kit before designing my portfolio helped me establish consistent design decisions from the beginning. By defining typography, colors, branding, and visual principles early, I can maintain a cohesive, professional, and recruiter-friendly experience across every page and future project.
