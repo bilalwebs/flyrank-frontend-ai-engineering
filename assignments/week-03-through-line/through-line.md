@@ -10,6 +10,27 @@
 
 ---
 
+## One-Line Claim Options (AI Generated)
+
+1. I build modern frontend applications that combine clean design with AI-assisted development.
+2. I create responsive and accessible web experiences using React and TypeScript.
+3. I turn ideas into production-ready frontend applications with modern AI tools.
+4. I build scalable React applications focused on performance and accessibility.
+5. I combine frontend engineering and AI to build impactful user experiences.
+6. I develop responsive web applications using React, TypeScript, and AI-assisted workflows.
+7. I transform ideas into clean, production-ready frontend solutions.
+8. I build accessible, performant, and modern web applications.
+9. I create user-focused frontend experiences powered by React and AI.
+10. I build clean, accessible frontend applications using React, TypeScript, and AI-assisted development.
+
+### Final Selected Claim
+
+I build clean, accessible frontend applications using React, TypeScript, and AI-assisted development — and I am ready to contribute to your engineering team.
+
+---
+
+---
+
 ## One-Line Claim
 
 I build clean, accessible frontend applications using React, TypeScript, and AI-assisted development — and I am ready to contribute to your engineering team.
@@ -53,6 +74,16 @@ The portfolio is a single-page application with a sticky header navigation. All 
 | Projects (per card) | Primary | Source Code | GitHub repo | Medium |
 | Contact | Accent (submit) | Send Message | Form submission | **Highest** |
 | Contact | Secondary | Email / GitHub / LinkedIn / Twitter | External URLs | Medium |
+
+---
+
+## Primary One Action
+
+The primary goal of this portfolio is:
+
+**Encourage recruiters and hiring managers to contact me for a Frontend AI Engineering Internship opportunity.**
+
+Every section and CTA is designed to guide visitors toward this final action.
 
 ---
 
