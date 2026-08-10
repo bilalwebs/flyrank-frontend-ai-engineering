@@ -94,6 +94,7 @@ The workflow generated the following documents:
 
 ---
 
+
 ## Repository Structure
 
 ```text
@@ -107,6 +108,9 @@ task-05-ship-an-automation-workflow-v2/
 │   └── RUN-05-FUTURE-ROADMAP.md
 │
 ├── WORKFLOW.md
+├── PROMPTS.md
+├── TIME_ANALYSIS.md
+├── FAILURE_ANALYSIS.md
 └── README.md
 ```
 

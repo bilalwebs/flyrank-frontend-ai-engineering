@@ -158,6 +158,13 @@ Save each generated response as an individual Markdown file inside the `outputs/
 
 ---
 
+## AI Tools Used
+
+- **Claude Project** — project analysis and documentation generation.
+- **ChatGPT** — prompt refinement, Markdown formatting, workflow documentation, and final review.
+
+---
+
 # Result
 
 The workflow successfully generated five professional documentation files that can be reused for internship assignments, portfolio projects, and GitHub repositories.
