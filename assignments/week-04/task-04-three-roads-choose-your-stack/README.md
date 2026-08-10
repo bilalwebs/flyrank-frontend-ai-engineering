@@ -109,7 +109,7 @@ GitHub:
 https://github.com/bilalwebs
 
 LinkedIn:
-https://www.linkedin.com/in/muhammad-bilal-hussain
+[https://www.linkedin.com/in/muhammad-bilal-hussain](https://www.linkedin.com/in/bilal-hussain-dev/)
 
 ### Folder structure
 
