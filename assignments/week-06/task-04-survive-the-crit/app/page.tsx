@@ -1,0 +1,31 @@
+import { Background } from "@/components/layout/Background";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { HeroSection } from "@/components/portfolio/HeroSection";
+import { AboutSection } from "@/components/portfolio/AboutSection";
+import { ProjectsSection } from "@/components/portfolio/ProjectsSection";
+import { SkillsSection } from "@/components/portfolio/SkillsSection";
+import { ContactForm } from "@/components/contact/ContactForm";
+
+export default function Home() {
+  return (
+    <>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+      <Background />
+      <Header />
+      <main
+        id="main-content"
+        className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8"
+      >
+        <HeroSection />
+        <AboutSection />
+        <ProjectsSection />
+        <SkillsSection />
+        <ContactForm />
+      </main>
+      <Footer />
+    </>
+  );
+}
