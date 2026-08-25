@@ -1,4 +1,4 @@
-type DeleteInput = { domain: string; reportId: string };
+export type DeleteInput = { domain: string; reportId: string };
 type DeleteOutput = {
   domain: string;
   reportId: string;
@@ -41,7 +41,7 @@ export function DeleteResultCard({ result }: { result: DeleteOutput }) {
   return (
     <div className="w-full max-w-md rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
       <p className="text-sm text-gray-800">
-        🗑️ Report <strong>{result.reportId}</strong> for{' '}
+        Report <strong>{result.reportId}</strong> for{' '}
         <strong>{result.domain}</strong> was deleted.
       </p>
       <p className="mt-1 text-xs text-gray-500">
