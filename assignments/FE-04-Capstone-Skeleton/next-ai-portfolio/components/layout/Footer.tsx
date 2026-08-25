@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { navigation } from "@/data/navigation"
+import { contactInfo } from "@/data/portfolio"
+import { siteConfig } from "@/data/site"
 
 export function Footer() {
   const year = new Date().getFullYear()
@@ -45,7 +47,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2" role="list">
               <li>
                 <a
-                  href="https://github.com/yourusername"
+                  href={contactInfo.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
@@ -55,7 +57,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://linkedin.com/in/yourusername"
+                  href={contactInfo.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
@@ -65,7 +67,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:your.email@example.com"
+                  href={`mailto:${contactInfo.email}`}
                   className="text-sm text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
                 >
                   Email
@@ -77,7 +79,7 @@ export function Footer() {
 
         <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-zinc-200 pt-8 sm:flex-row dark:border-zinc-800">
           <p className="text-sm text-zinc-600 dark:text-zinc-400">
-            &copy; {year} Your Name. All rights reserved.
+            &copy; {year} {siteConfig.author}. All rights reserved.
           </p>
           <a
             href="#main-content"

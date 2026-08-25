@@ -9,7 +9,7 @@ export function AboutHero() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-16">
           <div className="flex-shrink-0">
-            <div className="relative h-56 w-56 overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-800 sm:h-64 sm:w-64">
+            <div className="relative h-56 w-56 overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:h-64 sm:w-64">
               <Image
                 src={aboutData.profileImage}
                 alt="Profile"

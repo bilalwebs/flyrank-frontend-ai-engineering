@@ -22,7 +22,7 @@ export function ProjectCard({
 }: ProjectCardProps) {
   return (
     <article
-      className={`group overflow-hidden rounded-xl border border-zinc-200 bg-white transition-shadow hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900 ${
+      className={`group overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-[var(--shadow-card)] transition-all duration-200 hover:border-primary/30 hover:shadow-[var(--shadow-card-hover)] dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-primary/30 ${
         featured ? "md:col-span-2" : ""
       }`}
     >

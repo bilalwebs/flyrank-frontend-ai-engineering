@@ -12,6 +12,8 @@
   --color-primary: #4c5fd5;
   --color-primary-hover: #3b4fc4;
   --color-accent: #e8a33d;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.08);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

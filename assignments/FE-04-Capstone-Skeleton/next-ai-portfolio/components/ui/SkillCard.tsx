@@ -27,7 +27,7 @@ const categoryLabels: Record<SkillCategory, string> = {
 
 export function SkillCard({ name, category, level }: SkillCardProps) {
   return (
-    <article className="rounded-xl border border-zinc-200 bg-white p-5 transition-shadow hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900">
+    <article className="rounded-xl border border-zinc-200 bg-white p-5 shadow-[var(--shadow-card)] transition-all duration-200 hover:shadow-[var(--shadow-card-hover)] dark:border-zinc-800 dark:bg-zinc-900">
       <div className="mb-3 flex items-start justify-between">
         <h3 className="font-semibold text-zinc-900 dark:text-zinc-50">
           {name}

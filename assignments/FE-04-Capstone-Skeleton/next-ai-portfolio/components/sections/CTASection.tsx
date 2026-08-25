@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/Button"
 
 export function CTASection() {
   return (
-    <section className="py-20 sm:py-32" aria-labelledby="cta-title">
+    <section className="bg-zinc-50 py-20 dark:bg-zinc-950 sm:py-32" aria-labelledby="cta-title">
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <h2
           id="cta-title"
