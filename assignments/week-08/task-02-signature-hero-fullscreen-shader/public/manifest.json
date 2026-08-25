@@ -1,0 +1,16 @@
+{
+  "name": "Developer Portfolio",
+  "short_name": "Portfolio",
+  "description": "A showcase of projects, skills, and professional experience built with Next.js and TypeScript.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4c5fd5",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}
