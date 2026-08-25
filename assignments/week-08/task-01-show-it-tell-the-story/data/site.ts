@@ -5,7 +5,7 @@ export const siteConfig: SiteConfig = {
   description:
     "A showcase of projects, skills, and professional experience built with Next.js and TypeScript. Created during the FlyRank Frontend AI Engineering Internship.",
   url: "https://your-portfolio.vercel.app",
-  author: "Your Name",
+  author: "Muhammad Bilal Hussain",
   keywords: [
     "frontend",
     "react",

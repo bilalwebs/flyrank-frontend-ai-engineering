@@ -7,7 +7,7 @@
 
 ## Introduction (30 seconds)
 
-> "Hi, I'm [Your Name]. This is my developer portfolio — a full-stack showcase project built during the FlyRank Frontend AI Engineering Internship.
+> "Hi, I'm Muhammad Bilal Hussain. This is my developer portfolio — a full-stack showcase project built during the FlyRank Frontend AI Engineering Internship.
 >
 > The goal was to create a production-quality portfolio that demonstrates real frontend skills: component architecture, accessibility, performance optimization, 3D interaction, and AI-assisted development.
 >

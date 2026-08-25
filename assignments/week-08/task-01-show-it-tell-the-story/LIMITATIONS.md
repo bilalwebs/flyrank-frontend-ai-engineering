@@ -33,8 +33,8 @@ This document honestly describes what is incomplete, what could improve, and wha
 ### 3. Placeholder Content
 
 **What's missing:** All personal data uses placeholders:
-- Name: "Your Name"
-- Email: "your.email@example.com"
+- Name: "Muhammad Bilal Hussain"
+- Email: "your.email@example.com" (placeholder — replace with real email)
 - GitHub: "https://github.com/yourusername"
 - LinkedIn: "https://linkedin.com/in/yourusername"
 - Projects: Generic names ("Project Alpha", "Project Beta", "Project Gamma")

@@ -13,7 +13,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Your Name",
+  "name": "Muhammad Bilal Hussain",
   "url": "https://your-portfolio.vercel.app",
   "jobTitle": "Frontend Developer"
 }

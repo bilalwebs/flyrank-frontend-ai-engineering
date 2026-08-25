@@ -8,7 +8,7 @@ import type {
 
 export const heroData: HeroData = {
   greeting: "Hi, I'm",
-  name: "Your Name",
+  name: "Muhammad Bilal Hussain",
   tagline: "Frontend Developer & AI Engineering Student",
   description:
     "I build accessible, performant web applications with modern technologies.",
