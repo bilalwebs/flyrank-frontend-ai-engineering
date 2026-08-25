@@ -1,3 +1,4 @@
+
 # Project Story — AI Job Application Assistant
 
 > The journey of building an AI agent that actually does useful work — not just a chatbot wrapper, but a real tool with structured output, file parsing, and clean architecture.
@@ -9,6 +10,7 @@
 I was frustrated with the gap between "AI demos" and "AI tools that actually help people." Most AI resume reviewers are just chatbot wrappers — you paste your resume, get a wall of generic text, and walk away with the same resume you started with.
 
 I wanted to build something different: an AI agent that:
+
 - **Parses real files** — not just reads pasted text, but actually opens PDFs and DOCX files
 - **Returns structured data** — not free-form paragraphs, but scored, categorized, actionable output
 - **Works with multiple LLMs** — because lock-in to one provider is a single point of failure
@@ -25,11 +27,13 @@ The job application process is stressful enough. A tool that actually helps you 
 I started by reading the FL-07 assignment requirements thoroughly. The OpenAI Agents SDK was the framework, but I needed to understand its patterns before writing code.
 
 **Key decisions:**
+
 - **Strategy Pattern for providers** — Three LLM backends (OpenAI, Groq, Gemini) behind a common interface. Switching providers means changing one line in `.env`, not rewriting agent code.
 - **Separation of concerns** — Seven distinct layers: UI, service, agent, tools, providers, models, config. Each does one thing well.
 - **Structured output via Pydantic** — The agent returns `AnalysisResult`, not free-form text. The UI renders parsed fields, not markdown soup.
 
 **What I removed during planning:**
+
 - `base_provider.py` — The SDK already provides `ModelProvider`. Reinventing it was over-engineering.
 - `parser_decorators.py` — Merged into `file_parser.py`. One module, one job.
 - `file_utils.py` — Validation belongs in the parser, not a separate utility.
@@ -80,6 +84,7 @@ The Streamlit UI was built to feel like a SaaS dashboard, not a homework assignm
 ### Phase 6: Testing and Documentation (Day 3-4)
 
 The test suite covers:
+
 - Config defaults and provider selection
 - Schema validation and boundary conditions
 - File parser with TXT, DOCX, and PDF fixtures
@@ -149,6 +154,7 @@ Tests run without API keys — the agent is mocked, so CI/CD can validate logic 
 ### For Job Seekers
 
 The tool provides:
+
 - **Objective scoring** — ATS compatibility on a 0-100 scale, not subjective opinions
 - **Gap analysis** — Specific skills required by the JD but absent from the resume
 - **Prioritized suggestions** — Actionable recommendations, not generic advice
@@ -157,6 +163,7 @@ The tool provides:
 ### For My Learning
 
 The project reinforced:
+
 - Clean architecture matters even for "small" projects
 - Structured output is better than free-form text for UI rendering
 - Real tools (file parsing) make agents genuinely useful
