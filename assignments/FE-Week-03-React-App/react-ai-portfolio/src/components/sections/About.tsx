@@ -1,124 +1,100 @@
-import type { AboutData } from "../../types";
-import { SectionTitle } from "../ui/SectionTitle";
+# file-entry-cache
+> Super simple cache for file metadata, useful for process that work on a given series of files
+> and that only need to repeat the job on the changed ones since the previous run of the process — Edit
 
-interface AboutProps {
-  data: AboutData;
+[![NPM Version](https://img.shields.io/npm/v/file-entry-cache.svg?style=flat)](https://npmjs.org/package/file-entry-cache)
+[![tests](https://github.com/jaredwray/file-entry-cache/actions/workflows/tests.yaml/badge.svg?branch=master)](https://github.com/jaredwray/file-entry-cache/actions/workflows/tests.yaml)
+[![codecov](https://codecov.io/github/jaredwray/file-entry-cache/graph/badge.svg?token=37tZMQE0Sy)](https://codecov.io/github/jaredwray/file-entry-cache)
+[![npm](https://img.shields.io/npm/dm/file-entry-cache)](https://npmjs.com/package/file-entry-cache)
+
+
+## install
+
+```bash
+npm i --save file-entry-cache
+```
+
+## Usage
+
+The module exposes two functions `create` and `createFromFile`.
+
+## `create(cacheName, [directory, useCheckSum])`
+- **cacheName**: the name of the cache to be created
+- **directory**: Optional the directory to load the cache from
+- **usecheckSum**: Whether to use md5 checksum to verify if file changed. If false the default will be to use the mtime and size of the file.
+
+## `createFromFile(pathToCache, [useCheckSum])`
+- **pathToCache**: the path to the cache file (this combines the cache name and directory)
+- **useCheckSum**: Whether to use md5 checksum to verify if file changed. If false the default will be to use the mtime and size of the file.
+
+```js
+// loads the cache, if one does not exists for the given
+// Id a new one will be prepared to be created
+var fileEntryCache = require('file-entry-cache');
+
+var cache = fileEntryCache.create('testCache');
+
+var files = expand('../fixtures/*.txt');
+
+// the first time this method is called, will return all the files
+var oFiles = cache.getUpdatedFiles(files);
+
+// this will persist this to disk checking each file stats and
+// updating the meta attributes `size` and `mtime`.
+// custom fields could also be added to the meta object and will be persisted
+// in order to retrieve them later
+cache.reconcile();
+
+// use this if you want the non visited file entries to be kept in the cache
+// for more than one execution
+//
+// cache.reconcile( true /* noPrune */)
+
+// on a second run
+var cache2 = fileEntryCache.create('testCache');
+
+// will return now only the files that were modified or none
+// if no files were modified previous to the execution of this function
+var oFiles = cache.getUpdatedFiles(files);
+
+// if you want to prevent a file from being considered non modified
+// something useful if a file failed some sort of validation
+// you can then remove the entry from the cache doing
+cache.removeEntry('path/to/file'); // path to file should be the same path of the file received on `getUpdatedFiles`
+// that will effectively make the file to appear again as modified until the validation is passed. In that
+// case you should not remove it from the cache
+
+// if you need all the files, so you can determine what to do with the changed ones
+// you can call
+var oFiles = cache.normalizeEntries(files);
+
+// oFiles will be an array of objects like the following
+entry = {
+  key: 'some/name/file', the path to the file
+  changed: true, // if the file was changed since previous run
+  meta: {
+    size: 3242, // the size of the file
+    mtime: 231231231, // the modification time of the file
+    data: {} // some extra field stored for this file (useful to save the result of a transformation on the file
+  }
 }
 
-export function About({ data }: AboutProps) {
-  return (
-    <section
-      id="about"
-      className="w-full bg-background py-20 sm:py-28"
-      aria-labelledby="about-heading"
-    >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionTitle
-          id="about-heading"
-          title="About Me"
-          subtitle="A snapshot of my journey, education, and what drives me forward."
-        />
+```
 
-        <div className="flex flex-col gap-12 lg:flex-row lg:gap-16">
-          <div className="flex flex-col items-center gap-8 lg:w-2/5 lg:items-start">
-            <div className="relative">
-              <span
-                className="absolute -inset-2 rounded-full bg-accent/20 blur-2xl"
-                aria-hidden="true"
-              />
-              <img
-                src={data.imageUrl}
-                alt="Profile photo"
-                width={224}
-                height={224}
-                className="relative h-48 w-48 rounded-full border-4 border-primary object-cover shadow-lg sm:h-56 sm:w-56"
-              />
-            </div>
+## Motivation for this module
 
-            <div className="flex flex-col gap-4 rounded-2xl border border-white/10 bg-surface/60 p-6 backdrop-blur-md">
-              <p className="text-base leading-relaxed text-text/80">
-                {data.bio}
-              </p>
-            </div>
-          </div>
+I needed a super simple and dumb **in-memory cache** with optional disk persistence (write-back cache) in order to make
+a script that will beautify files with `esformatter` to execute only on the files that were changed since the last run.
 
-          <div className="flex flex-1 flex-col gap-6">
-            <div className="rounded-2xl border border-white/10 bg-surface/60 p-6 backdrop-blur-md">
-              <h3 className="mb-2 font-heading text-lg font-semibold text-accent">
-                Education
-              </h3>
-              <p className="text-sm leading-relaxed text-text/70">
-                {data.education}
-              </p>
-            </div>
+In doing so the process of beautifying files was reduced from several seconds to a small fraction of a second.
 
-            <div className="rounded-2xl border border-white/10 bg-surface/60 p-6 backdrop-blur-md">
-              <h3 className="mb-2 font-heading text-lg font-semibold text-accent">
-                Current Internship
-              </h3>
-              <p className="text-sm leading-relaxed text-text/70">
-                {data.internship}
-              </p>
-            </div>
+This module uses [flat-cache](https://www.npmjs.com/package/flat-cache) a super simple `key/value` cache storage with
+optional file persistance.
 
-            <div className="rounded-2xl border border-white/10 bg-surface/60 p-6 backdrop-blur-md">
-              <h3 className="mb-2 font-heading text-lg font-semibold text-accent">
-                Career Goal
-              </h3>
-              <p className="text-sm leading-relaxed text-text/70">
-                {data.careerGoal}
-              </p>
-            </div>
-          </div>
-        </div>
+The main idea is to read the files when the task begins, apply the transforms required, and if the process succeed,
+then store the new state of the files. The next time this module request for `getChangedFiles` will return only
+the files that were modified. Making the process to end faster.
 
-        <div className="mt-14">
-          <h3 className="mb-6 text-center font-heading text-2xl font-bold text-text sm:text-left">
-            Experience
-          </h3>
-          <div className="grid gap-6 sm:grid-cols-2">
-            {data.experiences.map((exp) => (
-              <article
-                key={exp.role}
-                className="rounded-2xl border border-white/10 bg-surface/60 p-6 backdrop-blur-md transition-colors duration-200 hover:bg-surface-light"
-              >
-                <p className="mb-1 text-xs font-medium uppercase tracking-wider text-accent">
-                  {exp.period}
-                </p>
-                <h4 className="font-heading text-lg font-bold text-text">
-                  {exp.role}
-                </h4>
-                <p className="mb-3 text-sm font-medium text-primary">
-                  {exp.organization}
-                </p>
-                <p className="text-sm leading-relaxed text-text/70">
-                  {exp.description}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-14">
-          <h3 className="mb-6 text-center font-heading text-2xl font-bold text-text sm:text-left">
-            By the Numbers
-          </h3>
-          <dl className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {data.stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="flex flex-col items-center gap-1 rounded-2xl border border-l-4 border-l-accent border-white/10 bg-surface/60 p-6 text-center backdrop-blur-md"
-              >
-                <dt className="sr-only">{stat.label}</dt>
-                <dd className="font-heading text-3xl font-bold text-accent">
-                  {stat.value}
-                </dd>
-                <dd className="text-xs text-text/60">{stat.label}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </div>
-    </section>
-  );
-}
+This module could also be used by processes that modify the files applying a transform, in that case the result of the
+transform could be stored in the `meta` field, of the entries. Anything added to the meta field will be persisted.
+Those processes won't need to call `getChangedFiles` they will instead c
