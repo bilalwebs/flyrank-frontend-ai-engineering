@@ -31,11 +31,8 @@ export const SKILLS: Skill[] = [
   { name: "LLM APIs", level: 88, category: "ai" },
   { name: "Prompt Engineering", level: 82, category: "ai" },
   { name: "RAG Systems", level: 78, category: "ai" },
-  { name: "TypeScript", level: 90, category: "languages" },
-  { name: "Python", level: 88, category: "languages" },
   { name: "JavaScript", level: 92, category: "languages" },
   { name: "SQL", level: 80, category: "languages" },
-  { name: "HTML / CSS", level: 95, category: "languages" },
 ];
 
 export const SKILL_CATEGORIES = [
