@@ -35,6 +35,23 @@ The repository README includes architecture overview, setup instructions, AI imp
 
 ---
 
+## Capstone Checklist
+
+| Status | Requirement |
+|--------|-------------|
+| ✅ | Live production deployment |
+| ✅ | AI integration (Groq + Gemini) |
+| ✅ | Responsive and accessible UI (WCAG 2.1 AA) |
+| ✅ | Structured AI output with validation |
+| ✅ | Error handling and fallback states |
+| ✅ | Unit tests (Vitest) |
+| ✅ | End-to-end tests (Playwright) |
+| ✅ | Lighthouse score ≥ 90 |
+| ✅ | Complete documentation |
+| ✅ | Deployment checklist and rollback plan |
+
+---
+
 ## Features
 
 | Feature | Description |
