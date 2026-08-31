@@ -15,6 +15,26 @@ An intelligent interview preparation platform that uses multi-provider AI to gen
 
 ---
 
+## About
+
+**InterviewAI Agent Pro** is my **Week 8 Frontend AI Engineering Capstone** project.
+
+This application is an AI-powered technical interview coach built with **Next.js 16**, **TypeScript**, **Tailwind CSS**, **React Hook Form**, and **Zod**. It supports **Groq** (primary) and **Google Gemini** (secondary) through a provider abstraction layer.
+
+### Highlights
+
+- AI-generated role-specific interview questions
+- Real-time answer evaluation with detailed feedback
+- Personalized learning roadmap with curated resources
+- Accessible responsive UI (WCAG 2.1 AA compliant)
+- Error handling and structured AI responses
+- Unit and integration testing
+- Production-ready deployment on Vercel
+
+The repository README includes architecture overview, setup instructions, AI implementation details, deployment guide, testing details, and future improvement roadmap.
+
+---
+
 ## Features
 
 | Feature | Description |
