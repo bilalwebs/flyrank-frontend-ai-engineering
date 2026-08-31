@@ -320,21 +320,36 @@ export function InterviewChat({ session: initialSession }: InterviewChatProps) {
               Interview complete! Redirecting to your report...
             </div>
           ) : (
-            <div className="flex gap-3">
-              <div className="flex-1">
-                <Textarea
-                  label="Your Answer"
-                  placeholder="Type your answer here..."
-                  rows={3}
-                  error={errors.answer?.message}
-                  {...register("answer")}
-                />
+            <div className="space-y-2">
+              <div className="flex gap-3">
+                <div className="flex-1">
+                  <Textarea
+                    label="Your Answer"
+                    placeholder="Type your answer here... (Ctrl+Enter to send)"
+                    rows={3}
+                    error={errors.answer?.message}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) {
+                        e.preventDefault();
+                        handleSubmit(onSubmitAnswer)();
+                      }
+                    }}
+                    {...register("answer")}
+                  />
+                </div>
+                <div className="flex items-end">
+                  <Button type="submit" disabled={isEvaluating}>
+                    {isEvaluating ? (
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    ) : (
+                      <Send className="h-4 w-4" />
+                    )}
+                  </Button>
+                </div>
               </div>
-              <div className="flex items-end">
-                <Button type="submit" disabled={isEvaluating}>
-                  <Send className="h-4 w-4" />
-                </Button>
-              </div>
+              <p className="text-xs text-zinc-500 dark:text-zinc-400">
+                Tip: Press <kbd className="rounded border border-zinc-300 px-1 py-0.5 text-xs font-mono dark:border-zinc-600">Ctrl</kbd> + <kbd className="rounded border border-zinc-300 px-1 py-0.5 text-xs font-mono dark:border-zinc-600">Enter</kbd> to send
+              </p>
             </div>
           )}
         </form>
