@@ -74,3 +74,14 @@ The GitHub Actions workflow (`.github/workflows/test.yml`) runs:
 - **IntersectionObserver mock:** Required for Framer Motion's `whileInView` animations
 - **`getAllByText` for duplicates:** Skills/Projects have repeated levels/tags, used `getAllByText` with length assertions
 - **Playwright over Cypress:** Better multi-browser support, faster execution, native async/await
+
+---
+
+## Week 6 Capstone Documents
+
+| Document | Purpose |
+|----------|---------|
+| [NEXT_CASE_GUIDE.md](../../week-06/NEXT_CASE_GUIDE.md) | How to add the next portfolio case study |
+| [NEXT_PROJECT.md](../../week-06/NEXT_PROJECT.md) | Named next project: AI Interview Coach |
+| [REMINDER.md](../../week-06/REMINDER.md) | Reminder evidence for project maintenance |
+| [CLAUDE_PROJECT.md](../../week-06/CLAUDE_PROJECT.md) | Claude Project continuity documentation |
